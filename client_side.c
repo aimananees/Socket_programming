@@ -18,7 +18,7 @@ int main(){
         //Specify the address for the socket
         struct sockaddr_in server_address;
         server_address.sin_family=AF_INET; //Type of address the socket is working
-        server_address.sin_port=htons(9001); //htons convert the port_number into specified data format which could be understood by the structure.It basically takes the port_number
+        server_address.sin_port=htons(9002); //htons convert the port_number into specified data format which could be understood by the structure.It basically takes the port_number
                                              the socket will connect to.
         server_address.sin_addr.s_addr=INADDR_ANY; //Actual port address i.e IP Address.INADDR_ANY refers to 0.0.0.0
 
@@ -38,6 +38,6 @@ int main(){
 
 
         //Close the socket
-        close(sock);
+        close(network_socket);
 
 }
